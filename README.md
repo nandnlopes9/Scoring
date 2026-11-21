@@ -1,39 +1,93 @@
-# Scoring — demonstração acadêmica beta
+# 🎮 Scoring — Projeto Acadêmico | SENAI
 
-Vitrine experimental de jogos desenvolvida durante a formação de **Assistente em Programação Web pelo SENAI (805 horas)**. Esta edição foi preparada para portfólio. As compras são demonstrativas e não envolvem clientes, pagamentos, licenças de jogos ou e-mails reais.
+O **Scoring** é um protótipo de plataforma de jogos desenvolvido durante minha formação de **Assistente em Programação Web pelo SENAI (805 horas)**.
 
-![Vitrine do Scoring com o banner e o início das categorias](docs/scoring-catalogo.png)
+O projeto foi criado para aplicar conhecimentos de desenvolvimento web, integração com banco de dados e construção de interfaces interativas.
 
-## Projeto original e adaptações
+Esta versão foi adaptada posteriormente para demonstração em portfólio, preservando a identidade visual e as principais funcionalidades do projeto original.
 
-- **Projeto acadêmico.** Identidade visual, vitrine, categorias, busca, páginas de jogos, login, cadastro, perfil, carrinho e painel de cadastro. A finalização original tentava enviar uma confirmação por SMTP.
-- **Scoring-Demo.** Preserva as telas principais e os recursos visuais, usa um catálogo demonstrativo com títulos reais e preços simulados, disponibiliza uma conta de teste e confirma a compra na tela. O cadastro público e o painel administrativo estão desativados. O perfil é somente para leitura. O carrinho e a conclusão da compra ficam na sessão de cada visitante.
-- Os atalhos de login social e a lista de desejos estavam incompletos no projeto original e ficaram fora do fluxo da demo.
+## 🌐 Demonstração online
 
-Tecnologias: PHP 8.1+ com PDO MySQL e sessões, MySQL ou MariaDB, HTML, CSS, JavaScript, jQuery, Slick, Swiper e Bootstrap.
+### [▶️ ACESSAR O SCORING](https://socring-demo.infy.click/)
 
-## Executar localmente
+Explore o catálogo de jogos, utilize a busca, faça login com a conta demonstrativa e simule uma compra.
 
-1. Crie um banco vazio **scoring_demo** com codificação utf8mb4. No phpMyAdmin, selecione esse banco e importe **Banco de Dados/scoring.sql** uma vez.
-2. Copie **PHP/config.example.php** para **PHP/config.local.php** e preencha host, porta, banco, usuário e senha. Use um usuário próprio do banco. A aplicação só precisa de SELECT após a importação.
-3. Na raiz da cópia, execute **php -S 127.0.0.1:8000** e abra http://127.0.0.1:8000. No XAMPP, também é possível usar a raiz pública do Apache.
+**Não é necessário instalar nada para testar a versão online.**
 
-## Experimentar a demo
+![Vitrine do Scoring](docs/scoring-catalogo.png)
 
-Explore os gêneros, procure por **Stardew Valley**, abra um jogo, adicione ao carrinho e clique em **Simular compra**. O ícone de perfil permite entrar com a conta de teste.
+## 🛠️ Tecnologias utilizadas
 
-- E-mail: **demo@scoring.example**
-- Senha pública da demo: **PORwCOGxy_45mKR0eF-iFw**
+- PHP e MySQL/MariaDB
+- HTML5 e CSS3
+- JavaScript
+- jQuery
+- Bootstrap
+- Swiper e Slick
+- PDO para conexão com o banco de dados
 
-O hash bcrypt no SQL foi gerado com password_hash(). Para substituí-lo em uma instalação própria, gere um novo com **password_hash()** no PHP e ajuste a inserção antes de importar. Atualize também a dica na tela de login.
+## ✨ Funcionalidades
 
-O catálogo corresponde às nove capas locais do projeto acadêmico. Os valores e requisitos exibidos são dados de demonstração. Com os gêneros corrigidos, Luta e Esportes mostram um estado vazio. Se você já importou uma versão anterior, use um banco vazio separado para importar este SQL atualizado.
+- Catálogo de jogos dividido em categorias.
+- Pesquisa de jogos.
+- Páginas de detalhes com informações e requisitos.
+- Sistema de login com autenticação.
+- Perfil demonstrativo de usuário.
+- Carrinho de compras utilizando sessões PHP.
+- Simulação de finalização de compra.
 
-## Hospedar no InfinityFree
+O projeto é acadêmico e não realiza pagamentos, vendas ou envio de licenças reais.
 
-1. Crie um subdomínio e um banco MySQL exclusivo no painel. Importe o SQL pelo phpMyAdmin. Use o nome, o host, a porta e o usuário informados pelo serviço.
-2. Envie o index da raiz e as pastas PHP, assets, Estilos e JavaScript para htdocs, preservando maiúsculas e minúsculas. Mantenha a pasta Banco de Dados fora de htdocs. Envie os arquivos .htaccess das pastas hospedadas. A biblioteca legada PHP/src do PHPMailer pode ficar fora do servidor, pois a demo não usa SMTP.
-3. Crie PHP/config.local.php no servidor com a configuração privada. Ative HTTPS e confirme que os arquivos de configuração, o SQL e o painel estão bloqueados no navegador.
-4. Teste em janela anônima a navegação, busca, login, perfil, carrinho e confirmação. Depois, inclua no portfólio o endereço HTTPS.
+## 🕹️ Conta demonstrativa
 
-A URL pública ainda não foi definida. Revise as permissões de uso de capas, banners e marcas originais antes de publicar as imagens. Se a credencial SMTP original era real, revogue-a na conta remetente e revise qualquer histórico existente antes de publicar código.
+Para experimentar as funcionalidades que exigem autenticação:
+
+**E-mail:** `demo@scoring.example`
+
+**Senha:** `PORwCOGxy_45mKR0eF-iFw`
+
+A conta é exclusivamente demonstrativa e não contém dados pessoais reais.
+
+## 📚 Projeto original e adaptações
+
+**Projeto acadêmico original:** desenvolvido durante a formação no SENAI, incluindo identidade visual, catálogo, categorias, pesquisa, páginas de jogos, cadastro, login, perfil, carrinho e painel administrativo.
+
+**Versão demonstrativa atual:** preparada posteriormente para permitir testes públicos. Inclui um banco com nove jogos, melhorias de responsividade, ajustes de autenticação e uma finalização fictícia.
+
+O cadastro público, os uploads, o painel administrativo e o envio de e-mails reais foram desativados nesta versão.
+
+Algumas funcionalidades do protótipo original, como login social e lista de desejos, não foram concluídas.
+
+## 💻 Executar localmente
+
+Caso queira executar o projeto em seu próprio computador:
+
+1. Configure um ambiente com PHP 8.1+ e MySQL/MariaDB.
+2. Crie um banco de dados vazio chamado `scoring_demo`, utilizando `utf8mb4`.
+3. Importe o arquivo `Banco de Dados/scoring.sql` pelo phpMyAdmin.
+4. Copie `PHP/config.example.php` para `PHP/config.local.php` e informe suas credenciais locais.
+5. Na raiz do projeto, execute:
+
+```bash
+php -S 127.0.0.1:8000
+```
+
+6. Abra `http://127.0.0.1:8000` no navegador.
+
+Também é possível executar o projeto utilizando XAMPP.
+
+## ☁️ Hospedagem
+
+A versão demonstrativa está publicada gratuitamente no **InfinityFree**, utilizando PHP e MySQL.
+
+**Endereço:** https://socring-demo.infy.click/
+
+O subdomínio contém uma pequena diferença de grafia em relação ao nome do projeto, sem impacto nas funcionalidades.
+
+## ℹ️ Observações
+
+O Scoring é um projeto acadêmico experimental, sem fins comerciais. Os preços, as compras e os dados de usuários são demonstrativos.
+
+Os nomes, marcas e materiais visuais dos jogos pertencem aos seus respectivos titulares. O Scoring não possui vínculo oficial com as empresas responsáveis pelos títulos apresentados.
+
+O repositório preserva o trabalho desenvolvido durante minha formação e documenta as adaptações realizadas posteriormente para disponibilizá-lo como demonstração pública.
