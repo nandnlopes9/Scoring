@@ -1,0 +1,103 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Comfortaa', cursive;
+}
+body{
+    background-color: #292929;
+    color: whitesmoke;
+}
+.global-painel{
+    margin-top: 8vh;
+}
+.tit-painel{
+    text-align: center;
+    font-size: 26pt;
+}
+.content-sections{
+    display: flex;
+    justify-content: center;
+    height: 75vh;
+    
+}
+.elementos{
+    display: flex;
+    flex-direction: column;
+}
+.elementos>input{
+    background-color: #5e7a7e;
+    border-bottom: 1px solid whitesmoke;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none; 
+    color: whitesmoke; 
+}
+.elementos input:focus-visible{
+    outline: 0;
+    box-shadow: 0 0 0 0;
+}
+.txt-label{
+    font-size: 9pt;
+}
+.titulos-form{
+    font-size: 12pt;
+    font-weight: bold;
+}
+.adc-info{
+    background-color: #5e7a7e;
+    border-radius:7px;
+    margin-right: 14px;
+    padding: 22px 52px 12px 37px;
+    width: 20vw;
+}
+.req-min{
+    background-color: #5e7a7e;
+    border-radius:7px;
+    margin-right: 14px;
+    padding: 22px 52px 12px 37px;
+    width: 20vw;
+}
+.req-rec{
+    background-color: #5e7a7e;
+    border-radius:7px;
+    margin-right: 14px;
+    padding: 22px 52px 12px 37px;
+    width: 20vw;
+}
+
+                                                       /*        Botoes sair e cadastrar        */
+
+.bot-confirme{
+    display: inline-block;
+    justify-content: flex-end;
+    margin-right: 10vw;
+    
+}
+.bot-confirme > input{
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+
+}
+.bot-confirme > input:hover{
+    background-color:#5d8a66;
+    color: whitesmoke;
+}
+
+.sair{
+    display: inline-block;
+    justify-content: flex-end;
+    margin-right: 2vw;
+    margin-top: 2vh;
+    margin-left: 65vw;
+    
+}
+.sair > input{
+    padding: 10px 20px 10px 20px;
+    border-radius: 4px;
+    border: none;
+}
+.sair > input:hover{
+    background-color:#5d8a66;
+    color: whitesmoke;
+}

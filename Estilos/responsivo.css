@@ -1,0 +1,174 @@
+
+/* Shared navigation and catalogue */
+body { min-width: 0; }
+.home nav, .busca nav, .jogo nav, .perfil nav, .carrinho nav {
+    box-sizing: border-box;
+    padding-inline: clamp(12px, 9vw, 128px);
+}
+nav .logo { margin-left: 0; display: block; }
+nav .menu { min-width: 0; }
+nav .menu ul {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+}
+nav .menu input { min-width: 0; width: clamp(72px, 24vw, 270px); }
+nav .menu button { flex: none; }
+nav .menu a { display: grid; place-items: center; flex: none; }
+.home .slider { position: relative; height: auto; }
+.home .slides { width: 100%; height: auto; }
+.home .slide { flex: 0 0 100%; width: 100%; }
+.home .slide img, .home .banner-jornada { display: block; width: 100%; height: auto; }
+.home #radio2:checked ~ .first { margin-left: -100%; }
+.home #radio3:checked ~ .first { margin-left: -200%; }
+.home .manual-navigation, .home .navigation-auto {
+    inset: auto 0 clamp(6px, 3vw, 40px);
+    width: auto;
+    margin: 0;
+    justify-content: center;
+}
+.home .gen form {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: clamp(6px, 1.5vw, 20px);
+    width: min(100%, 1170px);
+    align-items: center;
+}
+.home .gen img { width: 100%; min-width: 0; margin: 0; }
+.home .product-card, .genero .product-card { height: auto; }
+.home .product-info, .genero .product-info, .busca .product-info { height: auto; min-height: 98px; overflow-wrap: anywhere; }
+.home .product-brand, .genero .product-brand, .busca .product-brand {
+    font-size: clamp(17px, 2vw, 25px);
+    margin-bottom: .25rem;
+}
+.busca-titulo { padding: 90px 5vw 0; color: white; }
+.busca-titulo h1 { font-size: clamp(25px, 5vw, 48px); }
+.busca-resultados {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 250px));
+    gap: clamp(12px, 3vw, 40px);
+    padding: 1rem 5vw;
+}
+.busca .product-card { width: auto; margin: 0; height: auto; min-width: 0; }
+.busca .product-image { display: block; height: auto; aspect-ratio: 5 / 7; }
+.busca .product-thumb { display: block; object-fit: cover; }
+
+.genero .container { width: 100%; height: auto; min-height: 100vh; }
+.genero .header-genero h1 { font-size: clamp(24px, 8vw, 105px); }
+.genero .voltar-catalogo { display: inline-block; margin: 1rem; color: white; }
+.genero .genero-vazio { color: white; text-align: center; margin: 2rem 1rem; }
+.genero .product-container { overflow-x: auto; }
+
+/* Product details */
+.jogo .global {
+    box-sizing: border-box;
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 7fr) minmax(0, 4fr);
+    gap: clamp(24px, 7vw, 100px);
+    margin: 0 auto;
+    padding: 90px clamp(16px, 8vw, 120px) 30px;
+    max-width: 1500px;
+}
+.jogo .conteudo-escrito, .jogo .conteudo-visual { min-width: 0; }
+.jogo .conteudo-escrito { overflow-wrap: anywhere; width: auto; margin-right: 0; text-align: left; }
+.jogo .nome-jogo { font-size: clamp(25px, 3.4vw, 40px); line-height: 1.15; }
+.jogo .desc-jogo { font-size: clamp(17px, 2.1vw, 24px); }
+.jogo .capa-jogo { display: block; width: 100%; max-height: 72vh; height: auto; object-fit: contain; }
+.jogo .homesLider { margin-inline: 20px; min-width: 0; }
+.jogo .slick-list { overflow: hidden; }
+.jogo .botoes form { min-width: 0; max-width: 100%; }
+.jogo .small_img { max-width: 100%; height: auto; }
+.jogo .requisitos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.jogo .requisitos h1 { font-size: clamp(15px, 2.4vw, 26px); }
+.jogo .requisitos p { overflow-wrap: anywhere; }
+.jogo .min { margin: 0; }
+.jogo .requisitos-aviso { color: #c9c5c5; margin-bottom: 1rem; }
+.jogo .adc-carrinho { min-height: 44px; height: auto; max-width: 100%; padding: .5rem; white-space: normal; }
+.jogo #bt_close { position: fixed; inset: 0; box-sizing: border-box; z-index: 20; }
+.jogo #modal_img { width: auto; max-width: 92vw; max-height: 85vh; }
+
+/* Cart and account */
+.carrinho .container-carrinho {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    width: 100%;
+    max-width: 1180px;
+    margin: 80px auto 0;
+    gap: clamp(16px, 4vw, 64px);
+    align-items: start;
+}
+.carrinho .container-itens { width: 100%; gap: clamp(8px, 2vw, 20px); }
+.carrinho .container-itens > img { width: clamp(60px, 15vw, 128px); flex: none; }
+.carrinho .container-itens > div { min-width: 0; overflow-wrap: anywhere; }
+.carrinho .valor-item { padding-left: 0; margin: .5rem 0; align-items: center; }
+.carrinho .remover-item { padding: .35rem; background: transparent; cursor: pointer; }
+.carrinho .valor-pedido { height: auto; min-height: clamp(210px, 52vh, 520px); min-width: 0; }
+.carrinho .valor-pedido h3 { padding-inline: 1rem; }
+.carrinho .btn-comprar { padding-inline: clamp(10px, 4vw, 46px); }
+.perfil .informacoes { margin: 85px 1rem 1rem; font-size: clamp(24px, 5vw, 45px); }
+.perfil #mlista { padding-top: 0; margin: 2rem clamp(16px, 7vw, 95px); font-size: clamp(22px, 4vw, 35px); }
+.perfil .slide-content { margin-inline: clamp(34px, 7vw, 100px); }
+.perfil .swiper-slide { background: transparent; border: 0; }
+.perfil .swiper-slide .card-image { display: block; width: 100%; height: auto; aspect-ratio: 5 / 7; object-fit: cover; }
+.perfil .gallery-items { width: clamp(130px, 25vw, 250px); height: auto; aspect-ratio: 5 / 7; }
+.login { box-sizing: border-box; min-height: 100vh; height: auto; width: 100%; padding: 1rem; }
+.login form { width: min(100%, 1040px); }
+.login .container { width: 100%; height: auto; }
+.login .conteudo {
+    box-sizing: border-box;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 1rem;
+    width: 100%;
+    padding: clamp(16px, 3vw, 44px);
+}
+.login .img-box-login, .login .text-login, .login .input-login, .login .login-login { width: auto; margin: 0; }
+.login .img-box-login img { display: block; padding: 0; height: auto; max-height: 76vh; object-fit: contain; }
+.login .text-login h1 { font-size: clamp(26px, 4vw, 55px); }
+.login .input-login { gap: .75rem; color: #c9c5c5; }
+.login .container input { box-sizing: border-box; max-width: 100%; font-size: clamp(16px, 2.4vw, 26px); margin: 0; padding: .5rem; }
+.login .input-login input { width: 100%; }
+.login .login-login { align-items: center; gap: .75rem; flex-wrap: wrap; }
+.login .login-login a { font-size: clamp(14px, 2vw, 19px); color: #c9c5c5; margin: 0; }
+.confirmacao #idtela { box-sizing: border-box; width: 100%; padding: 1rem; }
+.confirmacao #idtela p { font-size: clamp(20px, 5vw, 33px); margin-bottom: .65rem; }
+.sair main { color: whitesmoke; }
+.sair main a { color: #c9c5c5; }
+.sair form { margin: 1rem 0; }
+
+@media (max-width: 900px) {
+    .home nav, .busca nav, .jogo nav, .perfil nav, .carrinho nav { padding-inline: clamp(10px, 3vw, 24px); }
+    nav .menu a { padding-inline: clamp(6px, 1.5vw, 13px); }
+    .home .slider { margin-top: 64px; }
+    .home .catalago { margin-top: clamp(22px, 6vw, 56px); font-size: clamp(16px, 3.5vw, 26px); }
+    .home .product-category, .genero .product-category {
+        font-size: clamp(16px, 3.5vw, 28px);
+        margin-bottom: 1rem;
+    }
+    .home .product-card, .genero .product-card { width: clamp(150px, 33vw, 250px); margin-right: 16px; }
+    .home .product-image, .genero .product-image { height: auto; aspect-ratio: 5 / 7; }
+    .home .product-thumb, .genero .product-thumb { display: block; object-fit: cover; }
+    .home .card-btn, .genero .card-btn { opacity: 1; padding: .45rem; }
+}
+
+@media (max-width: 620px) {
+    nav .menu input { width: clamp(92px, 30vw, 185px); }
+    nav .menu a { padding: 8px; }
+    .home .gen form { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .home .gen img:first-of-type { grid-column: 1 / -1; }
+    .busca-resultados { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .jogo .global { grid-template-columns: minmax(0, 1fr); gap: 20px; padding-top: 84px; }
+    .jogo .conteudo-visual { grid-row: 1; }
+    .jogo .capa-jogo { max-height: 44vh; max-width: 300px; margin-inline: auto; }
+    .jogo .preco { font-size: 22px; }
+    .carrinho .container-carrinho { grid-template-columns: minmax(0, 1fr); }
+    .carrinho .valor-pedido { min-height: 200px; }
+    .login .conteudo {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas: 'img' 'txt' 'cont' 'btn';
+        border-width: 0;
+    }
+    .login .img-box-login img { width: 100%; max-height: 135px; object-fit: cover; }
+}

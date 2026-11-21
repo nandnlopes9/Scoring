@@ -1,0 +1,8 @@
+/PHP/config.local.php
+/PHP/_private/config.local.php
+.env
+.env.*
+*.log
+*.bak
+*.backup
+*.sql.gz

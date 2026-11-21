@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(../../assets/imagem_loginCadastro/imagem/hollowzin2.jpg);
+    font-family: 'Comfortaa', cursive;
+}
+
+ body::after{
+    content: '';
+    background-color: rgb(33, 32, 32);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .95;
+    z-index: -1;
+}
+
+.container{
+    display: grid;
+    margin-top: 20vh;
+    height: 70vh;
+    grid-template-areas:
+    'input1 input2'
+    'input3 input4'
+    'input5 input6'
+    'sign sign'
+    'word word'
+    'google steam';
+    grid-row-gap: 30px;
+    grid-column-gap: 60px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.container input{
+    border: none;
+    border-bottom: 3px solid white;
+    font-size: 33px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: transparent;
+    color: white;
+    padding-bottom: 10px;
+}
+
+.container input:focus-visible{
+    outline: 0;
+    box-shadow: 0 0 0 0;
+    
+}
+
+.input1{grid-area: input1;}
+.input2{grid-area: input2;}
+.input3{grid-area: input3;}
+.input4{grid-area: input4;}
+.input5{grid-area: input5;}
+.input6{grid-area: input6;}
+.sign{grid-area: sign;}
+.word{grid-area: word;font-size: 26px;
+    color: white;}
+.steam{grid-area: steam;}
+.google{grid-area: google;}
+
+.sign input{
+    border: none;
+    border-radius: 35px;
+    width: 10vw;
+    padding: 20px;
+    color: white;
+    background-color: #595959;
+    font-weight: 700;
+    font-size:28px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sign input:hover{
+    background-color: #3ac41d;
+}
+
+
+.word p::before, 
+.word p::after{
+    display: inline-block;
+    content: "";
+    height: 3px;
+    width: 18.8vw;
+    position: relative;
+    vertical-align: middle;
+    background-color: white;
+}
+
+
+.google button, .steam button{
+    border: none;
+    border-radius:30px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 15px;
+    color: black;
+    background-color: #b4b4b4;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.google img, .steam img{
+    width: 15px;
+    margin-right: 5px;
+}
+
+.google button:hover, .steam button:hover{
+    background-color: white;
+}
+
+::-webkit-input-placeholder{
+    color: white;
+}
+
+

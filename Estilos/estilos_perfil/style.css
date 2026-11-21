@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+   
+}
+
+
+body{
+
+    min-height: 100vh;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://wallpapercave.com/wp/wp2928790.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    
+}
+
+body::after{
+    content: '';
+    background-color: rgb(5, 5, 5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .8;
+    z-index: -1;
+}
+
+                                                       /* Informações perfil */
+
+.informacoes{
+    color: white;
+    text-align: center;
+    margin: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 45px;
+    
+}
+
+#mlista{
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    padding-top: 60px;
+    margin: 50px;
+    margin-bottom: 45px;  
+    font-size: 35px;
+}
+                                                           /* Carrosel */
+.slide-container{
+    max-width: 1300px;
+    width: 100%;
+}
+.slide-content{
+    margin: 0 100px;
+    overflow: hidden;
+}
+
+.imagem-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px ;
+}
+
+.card-image{
+position: relative;
+height: 320px;  
+width: 250px;
+
+}
+
+.card-image	.card-img{
+    height: 100%;
+    width: 100%;
+    
+}
+
+.swiper-navBtn{
+    color: #fff;
+    transition: color 0.9s ease;
+}
+
+
+.swiper-navBtn::before,
+.swiper-navBtn::after{
+    font-size: 40px;
+    color: rgb(90, 88, 88);
+    
+}
+
+.swiper-navBtn:hover:before,
+.swiper-navBtn:hover:after{
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    
+}
+
+.swiper-button-next{
+    right: 0;
+    
+    
+}
+
+.swiper-button-prev{
+   left: 0; 
+}
+
+
+
+                                            /*               VEJA MAIS                */
+
+
+                                           
+                                            
+.central{
+ text-align: center;
+}
+                                            
+#btn{
+  padding: 9px 9px 9px 9px;
+  font-family: 'Roboto', sans-serif;
+  font-size: large;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  
+}
+
+#btn2{
+  padding: 9px 9px 9px 9px;
+  font-family: 'Roboto', sans-serif;
+  font-size: large;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  
+}
+
+.gallery-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2vw;
+    padding: 0 1vh;
+
+}
+.gallery-items{
+    width: 250px;
+    height: 350px;
+
+}
+.gallery-items img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-items:hover{
+    transform: scale(1.05);
+}
+
